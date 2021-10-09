@@ -33,11 +33,14 @@ wait = 2
 
 for host in service:
     service[host] = socket.gethostbyname(host)
+
 def srv():
     with open('srv.json', 'w') as js:
         js.write(json.dumps(service, indent=2))
     with open('srv.yml', 'w') as ym:
         ym.write(yaml.dump(service, indent=2, explicit_start=True, explicit_end=True))
+
+srv()
 
 while 1==1 :
     for host in service:
@@ -45,6 +48,6 @@ while 1==1 :
         if ip != service[host]:
             print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")+' [ERROR] ' + str(host) +' IP mistmatch: '+service[host]+' '+ip)
             service[host]=ip
-    srv()
+            srv()
     time.sleep(wait)
 ```
