@@ -46,7 +46,7 @@ If you are looking for --startvm and related options, you need to use VirtualBox
 - Vagrant
 ```
 sysadmin@Sony-VPCY11M1R:~$ vagrant --version
-Vagrant 2.2.6
+Vagrant 2.2.19
 ```
 - Ansible
 ```
