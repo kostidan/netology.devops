@@ -32,13 +32,33 @@
 
 ## Задача 3
 
-Установить на личный компьютер:
-
 - VirtualBox
-- Vagrant
-- Ansible
+```
+sysadmin@Sony-VPCY11M1R:~$ virtualbox -h
+Oracle VM VirtualBox VM Selector v6.1.26_Ubuntu
+(C) 2005-2021 Oracle Corporation
+All rights reserved.
 
-*Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.*
+No special options.
+
+If you are looking for --startvm and related options, you need to use VirtualBoxVM.
+```
+- Vagrant
+```
+sysadmin@Sony-VPCY11M1R:~$ vagrant --version
+Vagrant 2.2.6
+```
+- Ansible
+```
+sysadmin@Sony-VPCY11M1R:~$ ansible --version
+ansible 2.9.6
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/sysadmin/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 3.8.5 (default, Jul 28 2020, 12:59:40) [GCC 9.3.0]
+
+```
 
 ## Задача 4 (*)
 
