@@ -47,7 +47,7 @@ INSERT 0 5
 test_db=# select count (*) from orders;
  count
 -------
-     4
+     5
 (1 row)
 
 test_db=# select count (*) from clients;
