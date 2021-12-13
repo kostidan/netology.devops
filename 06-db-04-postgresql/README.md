@@ -192,8 +192,13 @@ root@vagrant:~#
 
 *Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца `title` для таблиц `test_database`?*
 
-В секционированных таблицах для добавления уникальности необходимо создать индекс по ключевому столбцу:
+В секционированных таблицах для добавления уникальности необходимо в блоке создания таблицы добавить команду UNQUE:
 ```buildoutcfg
-CREATE INDEX ON orders (title);
+CREATE TABLE public.orders (
+    id integer NOT NULL,
+    title character varying(80),
+    price integer,
+    UNIQUE(title,price)
+)
+PARTITION BY RANGE (price);
 ```
-Эту команду можно добавить в файл бэкапа после создания таблицы.
